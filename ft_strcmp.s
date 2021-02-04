@@ -10,11 +10,11 @@ cmp_loop:
     inc rcx
     mov al, byte [rdi + rcx] 
     mov bl, byte [rsi + rcx] 
-    cmp rax, 0
+    cmp al, 0
     je end
-    cmp rbx, 0
+    cmp bl, 0
     je end
-    cmp rax, rbx
+    cmp al, bl
     je cmp_loop
 
 end:
